@@ -1,0 +1,20 @@
+<!--pages/play/play.wxml-->
+<view class='play-wrap'>
+    <image class='bg-pic' src='{{song.pic_premium}}'></image>
+    <view class='content'>
+        <image class='logo' src='/images/pic_logo.png'></image>
+        <image class='stick' style='transform:{{playing? "rotate(0deg)" : "rotate(-20deg)"}}' src='/images/stick_bg.png'></image>
+        <image class='cd-wrap' src='/images/disc-ip6.png'></image>
+        <image class='song-pic' src='{{song.pic_radio}}' style='animation-play-state:{{playing? "running" : "paused"}}'></image>
+        <view class='song-info'>
+            <view class='name'>{{song.title}}</view>
+            <view class='singer'>{{song.author}}</view>
+            <view class='lrc'>{{lrc}}</view>
+        </view>
+        <view class='btn'>
+            <image class='prev' catchtap='prev' src='/images/prev.png'></image>
+            <image class='bot-play' catchtap='play' src='{{playing? "/images/pause2.png" : "/images/play2.png"}}'></image>
+            <image class='next' catchtap='next' src='/images/next.png'></image>
+        </view>
+    </view>
+</view>

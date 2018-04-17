@@ -1,0 +1,17 @@
+<!--pages/poplist/poplist.wxml-->
+
+<view class='play-list'>
+    <view class='play-list-top'>
+        <view class='play-list-left'>
+            排行榜
+        </view>
+    </view>
+    <view class='list'>
+        <view class='item' wx:for='{{rankItemList}}' catchtap='albumDetail' data-id='{{item.id}}' data-index='{{index}}' wx:key='key'>
+            <view class='img-wrap'>
+                <image src='{{item.pic}}'></image>
+            </view>
+            <text class='item-title'>{{item.name}}</text>
+        </view>
+    </view>
+</view>

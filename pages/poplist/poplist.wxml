@@ -1,0 +1,18 @@
+<!--pages/poplist/poplist.wxml-->
+
+<view class='play-list'>
+    <view class='play-list-top'>
+        <view class='play-list-left'>
+            最新歌单
+        </view>
+    </view>
+    <view class='list'>
+        <view class='item' wx:for='{{list}}' catchtap='albumDetail' data-id='{{item.id}}' data-index='{{index}}' data-playcount='{{item.playCount}}' wx:key='key' wx:if='{{index < 100}}'>
+            <view class='paly-count'>{{item.playCount}}</view>
+            <view class='img-wrap'>
+                <image src='{{item.coverImgUrl}}'></image>
+            </view>
+            <text class='item-title'>{{item.name}}</text>
+        </view>
+    </view>
+</view>

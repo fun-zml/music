@@ -1,0 +1,68 @@
+/* pages/poplist/poplist.wxss */
+.play-list{
+    width: 750rpx;
+}
+.play-list .list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 12rpx 0 12rpx;
+    margin-top: 20rpx;
+     justify-content: space-around; 
+}
+.play-list .item{
+    width: 340rpx;
+    height: 240rpx;
+    margin-bottom: 25rpx;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+.play-list .item image{
+    width: 340rpx;
+    height: 195rpx;
+}
+.play-list .item .paly-count{
+    text-align: right;
+    width: 331rpx;
+    font-size: 25rpx;
+    color: #fff;
+    height: 44rpx;
+    background-color: rgba(0, 0, 0, .3);
+    line-height: 44rpx;
+    padding-right: 10rpx;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.play-list .item .item-title{
+    padding-top: 10rpx;
+    font-size: 28rpx;
+    line-height: 32rpx;
+}
+.play-list .play-list-top{
+    position: relative;
+    height: 68rpx;
+    line-height: 68rpx;
+}
+.play-list .play-list-top .play-list-more{
+    font-size: 22rpx;
+    color: #666666;
+
+    position: absolute;
+    top: 0;
+    right: 10rpx;
+}
+.play-list .play-list-top .play-list-left{
+    font-size: 29rpx;
+    color: #000;
+    padding-left: 20rpx;
+    margin-top: 10rpx;
+    border-left: 10rpx solid #ce3d3e;
+
+    position: absolute;
+    left: 15rpx;
+    top: 0;
+}

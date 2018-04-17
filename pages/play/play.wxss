@@ -1,0 +1,134 @@
+/* pages/play/play.wxss */
+.play-wrap{
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+
+    position: relative;
+}
+.play-wrap .bg-pic{
+    width: 100vw;
+    height: 100vh;    
+    filter: blur(40px);
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.play-wrap .content{
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+.content .logo{
+    width: 200rpx;
+    height: 34rpx;
+
+    position: absolute;
+    top: 20rpx;
+    left: 15rpx;
+}
+.content .stick{
+    width: 192rpx;
+    height: 300rpx;
+    transform-origin: 10% 10%;
+    transform: rotate(-20deg);
+    transition: transform 1s;
+    
+    position: absolute;
+    top: -35rpx;
+    left: 350rpx;
+    z-index: 10;
+}
+.content .cd-wrap{
+    width: 592rpx;
+    height: 592rpx;
+
+    position: absolute;
+    top: 140rpx;
+    left: 78rpx;
+    z-index: 9;
+}
+.content .song-pic{
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 50%;
+    animation: infinite round 10s linear;
+
+    position: absolute;
+    left: 175rpx;
+    top: 235rpx;
+    z-index: 4;
+}
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+.content .play-btn{
+    width: 130rpx;
+    height: 130rpx;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+
+    position: absolute;
+    left: 312rpx;
+    top: 369rpx;
+    z-index: 10;
+}
+.content .play-btn image{
+    width: 180rpx;
+    height: 180rpx;
+
+    position: absolute;
+    top: -26rpx;
+    left: -26rpx;
+}
+.content .song-info{
+    width: 525rpx;
+    text-align: center;
+    color: #fff;
+
+    position: absolute;
+    top: 750rpx;
+    left: 112rpx;
+}
+.content .song-info .name{
+    font-size: 35rpx;
+    margin-bottom: 10rpx;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content .song-info .singer{
+    font-size: 24rpx;
+    padding-bottom: 10rpx;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content .song-info .lrc{
+    height: 30rpx;
+    font-size: 30rpx;
+}
+.btn{
+    width: 100vw;
+    height: 200rpx; 
+    position: absolute;
+    top: 1000rpx;
+    left: 0rpx;
+    text-align: center;
+}
+.btn image{
+    width: 180rpx;
+    height: 180rpx;
+
+}

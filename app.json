@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/search/search",
+        "pages/rank/rank",
+        "pages/poplist/poplist",
+        "pages/songlist/songlist",
+        "pages/play/play",
+        "pages/ranksong/ranksong",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#ce3e3e"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "时下流行"
+            },
+            {
+                "pagePath": "pages/poplist/poplist",
+                "text": "歌单"
+            },
+            {
+                "pagePath": "pages/rank/rank",
+                "text": "排行榜"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索"
+            }
+        ],
+        "position": "top",
+        "selectedColor": "#ce3e3e"
+    }
+}

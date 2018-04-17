@@ -1,0 +1,10 @@
+<!--pages/search/search.wxml-->
+<view class='search-wrap'>
+    <input class='search-box' bindinput='search' placeholder='搜索歌曲 歌曲不全'></input>
+    <view class='list'>
+        <view class='item' wx:for='{{songlist}}' wx:key='key' catchtap='toplay' data-id='{{item.songid}}' data-index='{{index}}'>
+            <view class='song'>{{item.songname}}</view>
+            <view class='singer'></view>
+        </view>
+    </view>
+</view>

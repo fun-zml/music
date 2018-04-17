@@ -1,0 +1,57 @@
+<!--pages/songlist/songlist.wxml-->
+<view class='songlist'>
+    <view class='songlist-top'>
+        <image class='bg' src='{{infoObj.backgroundUrl}}'></image>
+        <view class='songlist-header'>
+            <text class='txt'>歌单</text>
+        </view>
+        <view class='songlist-info'>
+            <view class='pic'>
+                <text class='play-count'>{{playcount}}</text>
+                <image src='{{infoObj.backgroundUrl}}'></image>
+            </view>
+            <view class='right-info'>
+                <text class='txt'>{{infoObj.sign}}</text>
+                <view class='person'>
+                    <image class='user-pic' src='{{infoObj.avatarUrl}}'></image>
+                    <text class='username'>{{infoObj.creator}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='list'>
+        <view class='play-all'>
+            <image src='/images/plus_07.jpg'></image>
+            <text>播放全部</text>
+        </view>
+        <view class='item' wx:for='{{list}}' wx:key='key'>
+            <view class='count'>{{index+1}}</view>
+            <view class='song' catchtap='play'  data-id='{{item.song_id}}' data-index='{{index}}'>
+                <view>
+                    <text class='song-name'>{{item.title}}</text>
+                    <text class='singer'>{{item.author}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='button-player'>
+        <view class='left' bindtap='toplay'>
+            <image class='song-pic' src='{{currentSong.pic}}'></image>
+            <view class='song'>
+                <text class='song-name'>{{currentSong.song}}</text>
+                <text class='singer'>{{currentSong.singer}}</text>
+            </view>
+        </view>
+        <view class='play-btn'>
+            <image src='/images/playbar_btn_playlist.png'></image>
+            <image src='{{!playing? "/images/play.png" : "/images/pause.png"}}' catchtap='playbar'></image>
+            <image src='/images/playbar_btn_next.png' catchtap='next'></image>
+        </view>
+
+
+        <view class='progress'>
+            <view class='cover' style='width:{{progress}}'></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+/* pages/search/search.wxss */
+.search-box{
+    border: 1px solid #999;
+    border-radius: 15rpx;
+    padding: 10rpx 15rpx;
+    font-size: 28rpx;
+    box-shadow: 0 0 3rpx rgba(0, 0, 0, .3)
+}
+.list .item{
+    height: 80rpx;
+    border-bottom: 1px solid #eee;
+    margin-left: 20rpx; 
+    padding: 15rpx 0;
+}
+.list .item .song{
+    font-size: 30rpx;
+}

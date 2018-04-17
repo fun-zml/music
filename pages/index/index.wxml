@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="container">
+    <swiper class='banner' autoplay interval='2000' indicator-dots circular duration='1000' indicator-active-color='#017aff' indicator-color='#fff'>
+        <swiper-item wx:for='{{bannerList}}' wx:key='key'>
+            <image src='{{item}}'></image>
+        </swiper-item>
+    </swiper> 
+    <view class='play-list'>
+        <view class='play-list-top'>
+            <view class='play-list-left'>
+                <image src='/images/aei.png'></image>
+                推荐歌单
+            </view>
+            <view class='play-list-more' catchtap='more'>更多></view>
+        </view>
+        <view class='list'>
+            <view class='item' wx:for='{{list}}' catchtap='albumDetail' data-id='{{item.id}}' data-index='{{index}}' data-playcount='{{item.playCount}}' wx:key='key' wx:if='{{index < 6}}'>
+                <view class='paly-count'>{{item.playCount}}</view>
+                <image src='{{item.coverImgUrl}}'></image>
+                <text class='item-title'>{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    
+    <view class='play-list new-song'>
+        <view class='play-list-top'>
+            <view class='play-list-left'>
+                <image src='/images/aef.png'></image>
+                最新音乐
+            </view>
+            <view class='play-list-more' catchtap='more'>更多></view>
+        </view>
+        <view class='new-song-list'>
+            <view class='new-song-item' wx:for='{{newsongList}}' wx:key='key' catchtap='indexPlay' data-id='{{item.song_id}}' data-index='{{index}}'>
+                <view class='song-name'>{{item.title}}</view>
+                <view class='singer'>{{item.author}} - {{item.album_title}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='button-player'>
+        <view class='left' bindtap='toplay'>
+            <image class='song-pic' src='{{currentSong.pic}}'></image>
+            <view class='song'>
+                <text class='song-name'>{{currentSong.song}}</text>
+                <text class='singer'>{{currentSong.singer}}</text>
+            </view>
+        </view>
+        <view class='play-btn'>
+            <image src='/images/playbar_btn_playlist.png'></image>
+            <image src='{{!playing? "/images/play.png" : "/images/pause.png"}}' catchtap='playbar'></image>
+            <image src='/images/playbar_btn_next.png' catchtap='next'></image>
+        </view>
+
+
+        <view class='progress'>
+            <view class='cover' style='width:{{progress}}'></view>
+        </view>
+    </view>
+</view>

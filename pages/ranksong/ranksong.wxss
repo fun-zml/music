@@ -1,0 +1,243 @@
+/* pages/songlist/songlist.wxss */
+.songlist-top{
+    height: 469rpx;
+    background-color: #333;
+}
+.songlist-header{
+    height: 116rpx;
+    color: #fefefe;
+    line-height: 116rpx;
+    padding-bottom: 8rpx;
+    
+    position: relative;
+}
+.bg{
+    width: 750rpx;
+    height: 350rpx;
+    filter: blur(40px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.songlist-header .txt{
+    position: absolute;
+    top: 0;
+    left: 30rpx;
+}
+.songlist-info{
+    height: 283rpx;
+
+    display: flex;
+    flex-direction: row;
+}
+.songlist-info .pic{
+    width: 282rpx;
+    height: 282rpx;
+    margin-left: 23rpx;
+    
+    position: relative;
+}
+.songlist-info .pic image{
+    width: 282rpx;
+    height: 282rpx;
+}
+.songlist-info .pic .play-count{
+    color: #fff;
+    width: 272rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    font-size: 24rpx;
+    text-align: right;
+    padding-right: 11rpx;
+    
+    background-color: rgba(0, 0, 0, .4);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.songlist-info .right-info{
+    padding-left: 48rpx;
+
+    position: relative;
+}
+.songlist-info .right-info .txt{
+    width: 350rpx;
+    line-height: 45rpx;
+    max-height: 90rpx;
+    overflow: hidden;
+    font-size: 28rpx;
+    color: #fff;
+
+    position: absolute;
+    left: 48rpx;
+    top: 26rpx;
+}
+.right-info .person{
+    position: absolute;
+    left: 48rpx;
+    top: 146rpx;
+    height: 63rpx;
+}
+.right-info .user-pic{
+    width: 63rpx;
+    height: 63rpx;
+    border-radius: 50%;
+}
+.right-info .person .username{
+    height: 63rpx;
+    line-height: 63rpx;
+    width: 280rpx;
+    font-size: 28rpx;
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 70rpx;
+}
+.songlist .list{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 108rpx;
+}
+.songlist .list .play-all{
+    height: 78rpx;
+    line-height: 71rpx;
+    margin-left: 19rpx;
+    border-bottom: 1px solid #ececec;
+    padding-left: 93rpx;
+    font-size: 28rpx;
+
+    position: relative;
+}
+.songlist .list .play-all image{
+    width: 42rpx;
+    height: 42rpx;
+
+    position: absolute;
+    top: 16rpx;
+    left: 30rpx;
+}
+.songlist .list .item{
+    height: 165rpx;
+
+    display: flex;
+    flex-direction: row;
+}
+.songlist .list .item .count{
+    width: 150rpx;
+    height: 148rpx;
+    line-height: 148rpx;
+    padding-top: 15rpx;
+    text-align: center;
+    flex-grow: 0;
+    color: #757575;
+}
+.songlist .list .item .song{
+    flex-grow: 1;
+    border-bottom: 1px solid #f0f0f0;
+
+    position: relative;
+}
+.songlist .list .item .song-name{
+    font-size: 32rpx;
+    width: 500rpx;
+    height: 40rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    position: absolute;
+    top: 45rpx;
+    left: 0;
+}
+.songlist .list .item .singer{
+    font-size: 26rpx;
+    width: 500rpx;
+    color: #626262;
+    position: absolute;
+    top: 90rpx;
+    left: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.button-player{
+    width: 750rpx;
+    height: 108rpx;
+    background-color: rgba(255, 255, 255, .9);
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.button-player .song-pic{
+    width: 83rpx;
+    height: 83rpx;
+
+    position: absolute;
+    top: 10rpx;
+    left: 10rpx;
+}
+.button-player .progress{
+    height: 4rpx;
+    width: 750rpx;
+    background-color: rgba(255, 255, 255, .9);
+    /* background-color: #ce3c3d; */
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.button-player .cover{
+    height: 4rpx;
+    background-color: #ce3c3d; 
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.button-player .song{
+    position: absolute;
+    top: 0;
+    left: 110rpx;
+}
+.button-player .song-name{
+    width: 340rpx;
+    height: 35rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 30rpx;
+    color: #181818;
+
+    position: absolute;
+    top: 8rpx;
+    left: 0;
+}
+.button-player .singer{
+    width: 360rpx;
+    font-size: 25rpx;
+    color: #797979;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    position: absolute;
+    top: 50rpx;
+    left: 0;
+}
+.button-player .play-btn{
+    width: 295rpx;
+    height: 104rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.button-player .play-btn image{
+    width: 92rpx;
+    height: 104rpx;
+}
